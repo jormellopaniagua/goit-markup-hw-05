@@ -16,7 +16,9 @@
         <nav class="header gap">
           <a class="link webstudio" href="index.html">WebStudio</a>
           <ul class="list gap">
-            <li><a class="link linkNavigation" href="index.html">Estudio</a></li>
+            <li class="seleccionated">
+              <a class="link linkNavigation" href="index.html">Estudio</a>
+            </li>
             <li><a class="link textNavigation" href="portfolio.html">Portafolio</a></li>
             <li><a class="link textNavigation" href="#">Contactos</a></li>
           </ul>
@@ -44,7 +46,7 @@
     <main class="main">
       <section class="fondoOscuro hero">
         <h1 class="solutions">SOLUCIONES EFICACES PARA <br />SU NEGOCIO</h1>
-        <button type="button" class="button">Solicite Nuestro servicio</button>
+        <button data-modal-open type="button" class="button">Solicite Nuestro servicio</button>
       </section>
       <section class="container feature_height section">
         <ul class="list card_set">
@@ -322,6 +324,20 @@
           </ul>
         </div>
       </section>
+      <!-- MODAL -->
+      <section>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <p></p>
+            <button type="button" data-modal-close class="modal_close">
+              <svg class="close_icon">
+                <use href="./icons/symbol-defs.svg#icon-close-black-18dp-2-1"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- MODAL -->
       <footer class="fondoOscuro section footer_height">
         <div class="container foot">
           <div>
@@ -378,5 +394,6 @@
         </div>
       </footer>
     </main>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
