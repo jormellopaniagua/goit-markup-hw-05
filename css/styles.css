@@ -68,6 +68,16 @@ header {
 .seleccionated {
   position: relative;
 }
+/* animacion ---------------------------------------------------------------------------------*/
+@keyframes alargar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* animacion-------------------------------------------------------------------------------- */
 .seleccionated::after {
   content: '';
   position: absolute;
@@ -78,6 +88,7 @@ header {
   background-color: var(--webstudio-color);
   height: 4px;
   border-radius: 2px;
+  animation: alargar 2s linear 1s 1 normal backwards;
 }
 .whiteNavigation {
   color: var(--main-color, white);
@@ -123,7 +134,7 @@ header {
   text-align: center;
   align-self: center;
 }
-/* modal */
+/* modal--------------------------------------------------------------------------------- */
 .backdrop {
   display: flex;
   position: fixed;
@@ -167,7 +178,7 @@ header {
   height: 18px;
   fill: rgba(0, 0, 0, 1);
 }
-/* modal */
+/* modal--------------------------------------------------------------------------------------------------------------------- */
 .hero {
   padding-top: 179px;
   padding-bottom: 179px;
@@ -393,10 +404,10 @@ header {
   transition: var(--trans-bg);
 }
 .footer_icon:hover {
-  background-color: var(--webstudio-color);
+  background-color: rgba(33, 150, 243, 1);
 }
 .footer_icon:focus {
-  background-color: var(--webstudio-color);
+  background-color: rgba(33, 150, 243, 1);
 }
 .card_set {
   display: flex;
